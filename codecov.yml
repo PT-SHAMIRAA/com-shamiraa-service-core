@@ -1,0 +1,4 @@
+ignore:
+  - "Com.Shamiraa.Service.Core.Lib/Migrations"
+  - "Com.Shamiraa.Service.Core.WebApi/Startup.cs"
+  - "Com.Shamiraa.Service.Core.Test"

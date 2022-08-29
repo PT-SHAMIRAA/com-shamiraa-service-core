@@ -1,1 +1,1 @@
-# com-shamiraa-service-core
+# com-batiksolo-service-core
