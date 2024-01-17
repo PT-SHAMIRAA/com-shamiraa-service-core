@@ -98,6 +98,7 @@ namespace Com.Shamiraa.Service.Core.Lib.Services
             materialCompositionVM._updateAgent = materialComposition._LastModifiedAgent;
             materialCompositionVM.code = materialComposition.Code;
             materialCompositionVM.name = materialComposition.Name;
+            materialCompositionVM.Description = materialCompositionVM.Description;
 
 
             return materialCompositionVM;
@@ -119,6 +120,7 @@ namespace Com.Shamiraa.Service.Core.Lib.Services
             materialComposition._LastModifiedAgent = materialCompositionVM._updateAgent;
             materialComposition.Code = materialCompositionVM.code;
             materialComposition.Name = materialCompositionVM.name;
+            materialComposition.Description = materialCompositionVM.Description;
 
             return materialComposition;
         }
