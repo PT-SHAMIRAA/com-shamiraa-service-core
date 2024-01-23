@@ -19,7 +19,7 @@ namespace Com.Shamiraa.Service.Core.Lib.Services
         {
             string storageAccountName = APIEndpoint.StorageAccountName;
             string storageAccountKey = APIEndpoint.StorageAccountKey;
-            string storageContainer = "Shamiraa-product-image";
+            string storageContainer = "shamiraa-product-image";
 
             this.ServiceProvider = serviceProvider;
             this.StorageAccount = new CloudStorageAccount(new StorageCredentials(storageAccountName, storageAccountKey), useHttps: true);
