@@ -10,6 +10,9 @@ using System.Linq;
 using System.Linq.Dynamic.Core;
 using System.Reflection;
 using System.Text;
+using System.Threading.Tasks;
+using System.Text.RegularExpressions;
+using Microsoft.EntityFrameworkCore;
 
 namespace Com.Shamiraa.Service.Core.Lib.Services
 {
@@ -91,6 +94,12 @@ namespace Com.Shamiraa.Service.Core.Lib.Services
             int TotalData = pageable.TotalCount;
 
             return Tuple.Create(Data, TotalData, OrderDictionary, SelectedFields);
+        }
+
+        public Task<List<SizeModel>> GetSizeName(string code)
+        {
+            var item = DbContext.Sizes.Where(x => Regex.Replace(x.Size, @"\s", "") == Regex.Replace(code, @"\s", ""));
+            return item.ToListAsync();
         }
     }
 }
